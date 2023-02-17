@@ -1,0 +1,14 @@
+<!--pages/profile-songs/index.wxml-->
+<view class="title">{{title}}</view>
+<view class="song">
+  <view wx:if="{{itemlist.length}}">
+    <block wx:for="{{itemlist}}" wx:key="id">
+      <song-item item="{{item}}" data-id="{{item.id}}" data-index="{{index}}" index="{{index+1}}" showMore="{{false}}" showDelete="{{true}}" type="{{title}}" bind:reflesh="handleQueryData"
+      bindtap="handleItemClick"></song-item>
+    </block>
+  </view>
+  <view wx:else style="color: #808080;margin: 20px;text-align: center;">空空如也~</view>
+  <view class="clear_area">
+    <van-button wx:if="{{title == '历史记录'}}" type="primary" round bind:click="handleClearAll" size="small">清空记录</van-button>
+  </view>
+</view>

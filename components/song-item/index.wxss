@@ -1,0 +1,45 @@
+/* components/song-detail/index.wxss */
+.item{
+  display: flex;
+  align-items: center;
+  margin: 15rpx 0;
+}
+.item .index{
+  width: 40rpx;
+  margin: 30rpx;
+  text-align: center;
+}
+.item .content{
+  flex: 1;
+  overflow: hidden;
+  padding-right: 30rpx;
+}
+.item .name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .image{
+  width: 40rpx;
+  margin-right: 8rpx;
+}
+.item .artist{
+  color: #808080;
+  font-size: 26rpx;
+  white-space: nowrap;
+}
+.item .alias{
+  color: #808080;
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.resource{
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.more_icon{
+  margin-right: 15px;
+}

@@ -1,0 +1,50 @@
+/* components/toplist-item/index.wxss */
+.item{
+  background-color: #efefef;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15rpx;
+  overflow: hidden;
+  margin-bottom: 15rpx;
+  align-items: center;
+}
+.item .content{
+  padding: 15rpx;
+  flex: 1;
+  overflow: hidden;
+}
+.item .title{
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 5rpx;
+}
+.item .artist{
+  color: #808080;
+}
+.item .song{
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5rpx 0;
+}
+.album{
+  position: relative;
+}
+.album .image{
+  width: 220rpx;
+  display: block;
+}
+.album .play-count{
+  background-color: #000;
+  font-size: 30rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  color: #fff;
+  border-radius: 10rpx;
+  width: 120rpx;
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+<!--pages/detail-search/index.wxml-->
+<view class="detail-search">
+  <!-- 搜索框 -->
+  <van-search shape="round" value="{{searchVal}}" placeholder="请输入喜欢的歌曲" bind:change="handleSearchSuggest" bind:search="onSearch"></van-search>
+  <view wx:if="{{suggests.length==0 && songs.length == 0}}">
+    <view class="title">热门搜索</view>
+    <view class="search-keys">
+      <block wx:for="{{hotKeys}}" wx:key="index">
+        <view class="key" bindtap="handleKeyClick" data-value="{{item.first}}">{{item.first}}</view>
+      </block>
+    </view>
+  </view>
+  <!-- 展示搜索建议 -->
+  <view wx:if="{{suggests.length > 0 && songs.length == 0}}">
+    <block wx:for="{{suggests}}" wx:key="index">
+      <view class="result-item" data-keyword="{{item.keyword}}" bindtap="handleSuggestClick">
+        <image class="image" src="/assets/images/icons/search_icon.png" mode="widthFix"></image>
+        <rich-text nodes="{{nodes[index]}}"></rich-text>
+      </view>
+    </block>
+  </view>
+  <!-- 展示搜索结果 -->
+  <view wx:if="{{songs.length>0}}">
+    <block wx:for="{{songs}}" wx:key="index">
+      <view class="song_item" data-item="{{item}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="handleSongClick">
+        <view class="name">{{item.name}}</view>
+        <view class="artist">
+          <view><image class="sq_img" src="/assets/images/icons/sq_icon.png" mode="widthFix">
+          </image></view>
+          <block wx:for="{{item.ar}}" wx:key="index" wx:for-item="artist" wx:for-index="index1">
+            <view class="artname">
+              <text>{{artist.name}}</text><text wx:if="{{item.ar[index1+1]}}">、</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

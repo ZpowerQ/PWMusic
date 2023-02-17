@@ -1,0 +1,9 @@
+<!--components/song-menu-area/index.wxml-->
+<scroll-view scroll-x class="song-menus" show-scrollbar="false" enhanced>
+  <block wx:for="{{hotSongMenus}}" wx:key="id">
+    <playlist-item 
+      item="{{item}}" 
+      class="playlist-item" >
+    </playlist-item>
+  </block>
+</scroll-view>

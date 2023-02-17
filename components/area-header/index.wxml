@@ -1,0 +1,7 @@
+<!--components/area-header/index.wxml-->
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="rtext" wx:if="{{showRtext}}">
+    <text decode bindtap="handleClickMore">更多 &gt;</text>
+  </view>
+</view>

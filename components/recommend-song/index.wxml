@@ -1,0 +1,9 @@
+<!--components/recommend-song/index.wxml-->
+<view class="item">
+  <image src="{{item.picUrl}}" mode="widthFix" class="pic"></image>
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="artist">{{item.song.artists[0].name}}</view>
+  </view>
+  <image webp src="/assets/images/icons/arrow-right.png" class="more" mode="widthFix" lazy-load></image>
+</view>

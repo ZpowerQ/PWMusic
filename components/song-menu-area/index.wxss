@@ -1,0 +1,9 @@
+/* components/song-menu-area/index.wxss */
+.song-menus{
+  width: 100vw;
+  white-space: nowrap;
+}
+.playlist-item:last-child{
+  margin-right: 20rpx;
+}
+

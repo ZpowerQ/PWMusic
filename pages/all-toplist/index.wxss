@@ -1,0 +1,4 @@
+/* pages/detail-toplist/index.wxss */
+.detail-toplist{
+  margin: 20rpx;
+}

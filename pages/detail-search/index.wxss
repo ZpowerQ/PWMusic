@@ -1,0 +1,55 @@
+/* pages/detail-search/index.wxss */
+.title{
+  padding: 40rpx 20rpx 15rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.search-keys{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+.key{
+  background-color:#f8f3f3;
+  margin: 10rpx 20rpx;
+  border-radius: 15rpx;
+  font-size: 30rpx;
+  padding: 5rpx;
+  color: #0f0f0f;
+}
+.result-item{
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.result-item .image{
+  width: 55rpx;
+}
+.song_item{
+  padding: 20rpx 0rpx;
+  margin: 0 30rpx;
+  border-top: 1px solid #efefef;
+}
+.song_item .name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sq_img{
+  width: 40rpx;
+  margin-right:8rpx;
+  display: block;
+}
+.artist{
+  color: #808080;
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 6rpx;
+}
+.artname{
+  vertical-align: middle;
+}
+.test{
+  color: red;
+}

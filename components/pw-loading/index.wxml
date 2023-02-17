@@ -1,0 +1,5 @@
+<!--components/pw-loading/index.wxml-->
+<van-loading size="15px" wx:if="{{hasMore}}" style="margin: 15rpx 0;">
+    加载中...
+  </van-loading>
+<text class="bottom-text" wx:else>已经到达底部啦~</text>

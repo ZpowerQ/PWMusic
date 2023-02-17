@@ -1,0 +1,29 @@
+/* pages/detail-video/index.wxss */
+.mainVideo{
+  width: 100%;
+}
+.mvInfo{
+  margin: 10px 8px;
+  line-height: 22px;
+}
+.name{
+  font-size: 18px;
+}
+.publicTime,.artName{
+  font-size: 14px;
+  color: #808080;
+}
+.simiTitle{
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 8px;
+}
+.videos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 8px;
+}
+.video_item{
+  width: 48%;
+}

@@ -1,0 +1,26 @@
+/* pages/detail-playlist/index.wxss */
+.detail-playlist{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+playlist-item .item{
+  width: 230rpx;
+  margin-right: 0rpx;
+}
+.radio-group{
+  display: flex;
+  justify-content: center;
+  margin: 15rpx 0;
+}
+.van-radio__label{
+  padding-left: 10rpx !important;
+}
+.van-radio__label{
+  font-size: 14px;
+}
+.playlist-item{
+  margin-bottom: 12rpx;
+}

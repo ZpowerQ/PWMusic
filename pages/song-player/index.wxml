@@ -1,0 +1,62 @@
+<!--pages/song-player/index.wxml-->
+<wxs src="/pages/home-video/index.wxs" module="format"></wxs>
+<view class="song-player">
+  <image class="bg_img" src="{{songInfo.al.picUrl}}"></image>
+  <view class="navbar">
+    <text class="{{currentPage==0?'actived':''}}">歌曲</text>
+    |
+    <text class="{{currentPage==1?'actived':''}}">歌词</text>
+  </view>
+  <swiper class="song_swiper" bindchange="handleCurrentChange">
+    <swiper-item>
+      <view class="content">
+        <view class="album">
+          <image class="album_img" src="{{songInfo.al.picUrl}}" mode="widthFix"></image>
+        </view>
+        <view class="info">
+          <view class="name">{{songInfo.name}}</view>
+          <view class="artist">
+            <view>{{songInfo.ar[0].name}}</view>
+            <view wx:if="{{songInfo.al}}">专辑:《{{songInfo.al.name}}》</view>
+          </view>
+        </view>
+        <view class="lyric">{{lyric}}</view>
+        <view>
+          <slider 
+              block-size="12" 
+              class="song_slider" 
+              value="{{sliderVal}}"
+              bindchange="handleSliderChange"
+              bindchanging="handleSliderChanging">
+          </slider>
+          <view class="song_time">
+            <view class="current_time">{{format.formatDuration(currentTime)}}</view>
+            <view class="duration_time">{{format.formatDuration(durationTime)}}</view>
+          </view>
+        </view>
+        <view class="operation">
+          <image class="order" src="/assets/images/player/play_{{modeName}}.png" mode="widthFix" bindtap="handleModeChange"></image>
+          <image class="prev" src="/assets/images/player/play_prev.png" mode="widthFix" bindtap="handlePreClick"></image>
+          <image class="pause" src="/assets/images/player/play_{{isPlay?'pause':'resume'}}.png" mode="widthFix" bindtap="handleSongPlay"></image>
+          <image class="next" src="/assets/images/player/play_next.png" mode="widthFix" bindtap="handleNextClick"></image>
+          <image class="music" src="/assets/images/player/play_music.png" mode="widthFix" bindtap="showPlaylist"></image>
+        </view>
+      </view>
+      
+    </swiper-item>
+    <swiper-item>
+      <scroll-view 
+        scroll-y 
+        class="scroll_view" 
+        scroll-top="{{scrollTop}}"
+        scroll-with-animation>
+        <block wx:for="{{lyricInfos}}" wx:key="index">
+          <view class="lyricItem {{index == lyricIndex ? 'lyricActive': ''}}"
+              data-index="{{index}}"
+              bindtap="handleLyricClick"
+          >{{item.text}}</view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

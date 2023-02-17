@@ -1,0 +1,10 @@
+<!--pages/detail-profilemenu/index.wxml-->
+<view class="menusongs">
+  <block wx:for="{{songinfo.tracks}}" wx:key="id">
+    <song-item item="{{item}}" data-id="{{item.id}}" index="{{index+1}}" showMore="{{false}}" data-index="{{index}}"   bindtap="handleItemClick"></song-item>
+  </block>
+  <view class="add_area">
+    <van-button bind:click="handleAddSongs" round type="primary" wx:if="{{id=='undefined'}}" class="btn">添加歌曲</van-button>
+  </view>
+</view>
+

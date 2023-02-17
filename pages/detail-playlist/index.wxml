@@ -1,0 +1,10 @@
+<!--pages/detail-playlist/index.wxml-->
+<view class="detail_playlist">
+  <image src="{{playlist.coverImgUrl}}" mode="aspectFill" class="bg"></image>
+  <list-header item="{{playlist}}"></list-header>
+  <view class="songlist">
+    <block wx:for="{{playlist.tracks}}" wx:key="index">
+      <song-item item="{{item}}" index="{{index+1}}" showMore="{{true}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="handleItemClick"></song-item>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/main-profile/index.wxml-->
+<view class="profile" bindtap="onLogin">
+  <image src="{{isload?userInfo.avatarUrl:'/assets/images/profile/avatar.png'}}" mode="widthFix" class="avatar"></image>
+  <view class="nickname">{{isload?userInfo.nickName:'未登录'}}</view>
+</view>
+<view class="tabs">
+  <block wx:for="{{tabs}}" wx:key="name">
+    <view class="tab" bindtap="onTabItemClick" data-item="{{item}}">
+      <image src="/assets/images/profile/{{item.type}}.png" mode="widthFix" class="tab_icon"></image>
+      <view class="tab_name">{{item.name}}</view>
+    </view>
+  </block>
+</view>
+<view class="menu">
+  <area-header title="我的歌单" showRtext="{{false}}"></area-header>
+  <view class="menulist">
+    <view class="add_menu" bindtap="showDialog">
+      <view>创建歌单</view>
+      <van-icon name="plus" />
+    </view>
+    <view class="menulist">
+      <block wx:for="{{menulist}}" wx:key="id">
+        <view class="menuItem" bindtap="handleMenuClick" data-_id="{{item._id}}" data-id="{{item.id}}">
+          <image src="{{item.coverImgUrl || '/assets/images/icons/menu.png'}}" class="coverImg" mode="widthFix"></image>
+          <view class="menuinfo">
+            <view class="menuName">{{item.name}}</view>
+            <view class="count">{{item.tracks.length}}首</view>
+          </view>
+          <van-icon name="delete-o" class="deleteIcon" color="#808080" catchtap="handleDeleteMenu" data-id="{{item.id}}"/>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 对话框 -->
+<van-dialog use-slot title="添加歌单" show="{{ show }}" show-cancel-button bind:confirm="onConfirm">
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入歌单名"
+    bind:change="onChange"
+  />
+</van-dialog>

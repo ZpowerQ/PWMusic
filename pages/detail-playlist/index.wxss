@@ -1,0 +1,13 @@
+/* pages/detail-playlist/index.wxss */
+.bg{
+  width: 100%;
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.songlist{
+  background-color: #fff;
+  border-radius: 35rpx 35rpx 0 0;
+}

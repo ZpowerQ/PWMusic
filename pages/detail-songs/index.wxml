@@ -1,0 +1,6 @@
+<!--pages/detail-songs/index.wxml-->
+<view class="detail-songs">
+  <block wx:for="{{songlist}}" wx:key="id">
+    <song-detail item="{{item}}" index="{{index+1}}" data-id="{{item.id}}" bindtap="handleItemClick" data-index="{{index}}"></song-detail>
+  </block>
+</view>

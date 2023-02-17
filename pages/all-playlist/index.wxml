@@ -1,0 +1,19 @@
+<!--pages/detail-playlist/index.wxml-->
+<!-- 单选框 -->
+<van-radio-group class="radio-group" value="{{cat}}" bind:change="onChange" direction="horizontal">
+  <van-radio name="全部" icon-size="14px">全部</van-radio>
+  <van-radio name="华语" icon-size="14px">华语</van-radio>
+  <van-radio name="古风" icon-size="14px">古风</van-radio>
+  <van-radio name="欧美" icon-size="14px">欧美</van-radio>
+  <van-radio name="流行" icon-size="14px">流行</van-radio>
+</van-radio-group>
+<view class="detail-playlist">
+
+  <!-- 菜单组件 -->
+  <block wx:for="{{playlists}}" wx:key="index" wx:if="{{playlists.length>0}}">
+    <playlist-item item="{{item}}" class="playlist-item"></playlist-item>
+  </block>
+
+  <!-- 加载组件 -->
+  <pw-loading hasMore="{{more}}"></pw-loading>
+</view>

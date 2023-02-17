@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "toplist-item":"/components/toplist-item/index"
+  }
+}

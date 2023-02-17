@@ -1,0 +1,8 @@
+/* pages/detail-profilemenu/index.wxss */
+.btn{
+  margin-top: 30rpx;
+}
+.add_area{
+  display: flex;
+  justify-content: center;
+}

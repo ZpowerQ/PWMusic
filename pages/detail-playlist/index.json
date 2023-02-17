@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "list-header":"/components/list-header/index",
+    "song-item":"/components/song-item/index"
+  }
+}

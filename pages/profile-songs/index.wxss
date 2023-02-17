@@ -1,0 +1,10 @@
+/* pages/profile-songs/index.wxss */
+.title{
+  margin: 12px;
+  font-weight: bold;
+}
+.clear_area{
+  display: flex;
+  justify-content: center;
+  margin: 15rpx;
+}

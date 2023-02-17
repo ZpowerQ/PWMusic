@@ -1,0 +1,7 @@
+/* components/pw-loading/index.wxss */
+.bottom-text{
+  margin: 15rpx 0;
+  font-size: 30rpx;
+  color: #808080;
+  letter-spacing: 2rpx;
+}

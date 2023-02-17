@@ -1,0 +1,32 @@
+/* components/recommend-song/index.wxss */
+.item{
+  width: 100%;
+  display: flex;
+  margin: 16rpx 0;
+  align-items: center;
+}
+
+.item .pic{
+  width: 120rpx;
+  border-radius: 10rpx;
+}
+.item .content{
+  margin-left: 20rpx;
+  flex: 1;
+  overflow: hidden;
+}
+.item .name{
+  font-size: 36rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.item .artist{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #808080;
+}
+.item .more{
+  width: 60rpx;
+  float: right;
+}

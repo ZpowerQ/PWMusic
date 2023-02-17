@@ -1,0 +1,9 @@
+<!--components/playlist-item/index.wxml-->
+<wxs src="/pages/home-video/index.wxs" module="format"></wxs>
+<view class="item" bindtap="handleItemClick" data-id="{{item.id}}">
+  <view class="top">
+    <image class="image" lazy-load webp src="{{item.coverImgUrl}}" mode="widthFix"></image>
+    <view class="play-count">{{format.formatCount(item.playCount)}}</view>
+  </view>
+  <view class="name">{{item.name}}</view>
+</view>

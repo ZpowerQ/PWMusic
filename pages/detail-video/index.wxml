@@ -1,0 +1,23 @@
+<!--pages/detail-video/index.wxml-->
+<video class="mainVideo" 
+       src="{{mvURLInfo.url}}" 
+       autoplay
+       show-mute-btn
+       enable-play-gesture
+       show-screen-lock-button
+       show-snapshot-button
+       show-background-playback-button
+       referrer-policy="origin"></video>
+<view class="mvInfo">
+  <view class="name">{{mvDetail.name}}</view>
+  <view class="artName">{{mvDetail.artistName}}</view>
+  <view class="publicTime">发布时间：{{mvDetail.publishTime}}</view>
+</view>
+<view>
+  <view class="simiTitle">相似MV</view>
+  <view class="videos">
+    <block wx:for="{{simiVideos}}" wx:key="id">
+      <video-item class="video_item" item="{{item}}" bindtap="handleItemClick" data-id="{{item.id}}"></video-item>
+    </block>
+  </view>
+</view>

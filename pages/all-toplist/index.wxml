@@ -1,0 +1,6 @@
+<!--pages/detail-toplist/index.wxml-->
+<view class="detail-toplist">
+  <block wx:for="{{toplists}}" wx:key="id">
+    <toplist-item item="{{item}}"></toplist-item>
+  </block>
+</view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "playlist-item":"/components/playlist-item/index"
+  }
+}

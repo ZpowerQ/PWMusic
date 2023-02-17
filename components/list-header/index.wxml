@@ -1,0 +1,21 @@
+<!--components/list-header/index.wxml-->
+<wxs src="/pages/home-video/index.wxs" module="format"></wxs>
+<view class="list-header">
+  <image class="main_img" src="{{item.coverImgUrl}}" mode="widthFix"></image>
+  <view class="introduce">
+    <view class="title">{{item.name}}</view>
+    <image class="avatar" src="{{item.creator.avatarUrl}}" mode="widthFix"></image>
+    <text class="nickname">{{item.creator.nickname}}</text>
+    <view class="description">简介：{{item.description}}</view>
+  </view>
+</view>
+<view class="share">
+    <view class="handle" bindtap="handleCollectSong">
+      <image class="icon" src="/assets/images/icons/{{isCollect?'hasfavor_icon':'favor_icon'}}.png" mode="widthFix"></image>
+      <text class="count">{{format.formatCount(item.subscribedCount)}}</text>
+    </view>
+    <view class="handle">
+      <image class="icon" src="/assets/images/icons/share_icon.png" mode="widthFix"></image>
+      <text class="count">{{format.formatCount(item.shareCount)}}</text>
+    </view>
+  </view>

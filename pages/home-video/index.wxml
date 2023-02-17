@@ -1,0 +1,8 @@
+<!--pages/home-video/index.wxml-->
+<wxs src="./index.wxs" module="format"/>
+<view class="video">
+  <block wx:for="{{topMVs}}" wx:key="id">
+    <video-item class="video_item" item="{{item}}" bindtap="handleVideoClick" data-item="{{item}}"/>
+  </block>
+  <pw-loading hasMore="{{hasMore}}"></pw-loading>
+</view>

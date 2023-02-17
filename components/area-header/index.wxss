@@ -1,0 +1,13 @@
+/* components/area-header/index.wxss */
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 18rpx 0;
+}
+.title{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.header .rtext{
+  color: #808080;
+}

@@ -1,0 +1,15 @@
+<!--components/song-detail/index.wxml-->
+<view class="item">
+  <view class="index">{{index}}</view>
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="resource">
+      <image class="image" src="/assets/images/icons/sq_icon.png" mode="widthFix"></image>
+      <text class="artist">{{item.song.artists[0].name || item.ar[0].name}}</text>
+      <text class="alias" wx:if="{{item.song.alias.length>0 || item.al.name}}"> - {{item.song.alias[0] || item.al.name}}
+      </text>
+    </view>
+  </view>
+  <van-icon wx:if="{{showMore}}" name="more-o" class="more_icon" size="18px" color="#808080" catchtap="handleMoreClick"/>
+  <van-icon wx:if="{{showDelete}}" name="delete-o" class="more_icon" size="18px" color="#808080" catchtap="handleDeleteClick"/>
+</view>
